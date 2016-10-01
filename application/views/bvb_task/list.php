@@ -33,7 +33,7 @@
 				</td>
 				<td>
 				<button class="btn btn-danger" type="button"data-toggle="tooltip" data-placement="top" title="Remove from favourites">
-				<a href="<?=site_url('bvb_task/subscriptions/unsubscribe/'.$sub['id'])?>">
+				<a href="<?=site_url('subscriptions/unsubscribe/'.$sub['id'])?>">
 				<span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
 				</a>
 				</button>
@@ -60,7 +60,7 @@
 				</td>
 				<td>
 					<button class="btn btn-default" type="button" data-toggle="tooltip" data-placement="top" title="Add to favourites">
-			  		<a href="<?=site_url('bvb_task/subscriptions/subscribe/'.$channel['id'])?>">
+			  		<a href="<?=site_url('subscriptions/subscribe/'.$channel['id'])?>">
 			  		<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
 			  		</a>
 				</button>

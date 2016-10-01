@@ -17,10 +17,8 @@ class Main_ctrl extends CI_Controller {
                 {
                         show_error($this->migration->error_string());
                 }
-            //$this->session->unset_userdata('logged_in');
             $main_page_data = array(); 
             if (isset($_SESSION['logged_in'])) {
-                //var_dump($_SESSION['logged_in']);
                 $subscription_ids = $this->subscriptions_model->get_all_subscriptions_for_user($_SESSION['logged_in']['id']);
                 $main_page_data['subscribed_channels'] = $this->channels_model->get_channels_by_ids($subscription_ids, $searched_name, $searched_user);
                 $main_page_data['nonsubscribed_channels'] = $this->channels_model->get_channels_by_ids_exclusively($subscription_ids, $_SESSION['logged_in']['id'], $searched_name, $searched_user);

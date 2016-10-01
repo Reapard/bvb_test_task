@@ -23,14 +23,12 @@ class Channels extends CI_Controller {
 
     public function add_channel()
     {
-        //This method will have the credentials validation
        $this->load->library('form_validation');
      
        $this->form_validation->set_rules('chan_name', 'Channel name', 'required');
        $this->form_validation->set_rules('chan_desc', 'Description', 'callback_check_channel_on_create');
        if($this->form_validation->run() == FALSE)
        {
-         //Field validation failed.  User redirected to login page
         $message = array(
             'message_type' => 'bg-danger',
             'message_body' => 'Invalid channel name'
@@ -40,7 +38,6 @@ class Channels extends CI_Controller {
        }
        else
        {
-         //Go to private area
         $message = array(
             'message_type' => 'bg-success',
             'message_body' => 'Channel successfully added'
@@ -73,7 +70,6 @@ class Channels extends CI_Controller {
 
     public function edit_channel($channel_id)
     {
-        //This method will have the credentials validation
        $this->load->library('form_validation');
 
        $this->session->set_userdata("edited_channel", $channel_id);
@@ -82,7 +78,6 @@ class Channels extends CI_Controller {
 
        if($this->form_validation->run() == FALSE)
        {
-         //Field validation failed.  User redirected to login page
         $message = array(
             'message_type' => 'bg-danger',
             'message_body' => 'Invalid channel name'
@@ -92,7 +87,6 @@ class Channels extends CI_Controller {
        }
        else
        {
-         //Go to private area
         $message = array(
             'message_type' => 'bg-success',
             'message_body' => 'Channel successfully edited'

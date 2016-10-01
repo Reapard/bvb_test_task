@@ -9,19 +9,6 @@
 			<div class="well">
 				<h3>Add channel</h3>
 			   <?php echo validation_errors(); ?>
-			   
-			   <?php if (isset($_SESSION['channel_creation_message'])): ?>
-			   <p class=<?=$_SESSION['channel_creation_message']['message_type']?>>
-			   <?=$_SESSION['channel_creation_message']['message_body']?>
-			   </p>
-			   <?php endif; ?>
-
-			   <?php if (isset($_SESSION['channel_edit_message'])): ?>
-			   <p class=<?=$_SESSION['channel_edit_message']['message_type']?>>
-			   <?=$_SESSION['channel_edit_message']['message_body']?>
-			   </p>
-			   <?php endif; ?>
-
 			   <?php echo form_open('channels/add_channel'); ?> 
 			    <div class="form-group">
 			    	<label for="chan_name">Channel name:</label>

@@ -50,17 +50,13 @@ class Users_model extends CI_Model {
 
 		public function get_user_list_by_ids($ids)
 		{
-			//var_dump($ids);
 			$id_list = array();
 			$result = array();
 			foreach ($ids as $id) {
-				var_dump($id);
 				$id_list = $id['user'];
 			}
 			$query = $this->db->select('email')->where_in('id', $id_list)->get('users_table');
-        	//$query->result_array();
         	foreach ($query->result_array() as $query_unit) {
-        		var_dump($query_unit);
         		$result[] = $query_unit['email'];
         	}
         	return $result;
