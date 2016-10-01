@@ -1,7 +1,7 @@
 <div class="well">
 	<h3>Register new account</h3>
    <?php echo validation_errors(); ?>
-   <?php echo form_open('bvb_task/users/verify_registration'); ?> 
+   <?php echo form_open('users/verify_registration'); ?> 
     <div class="form-group">
     	<label for="email">Email:</label>
      	<input type="text" class="form-control" size="20" id="email" name="email"/>

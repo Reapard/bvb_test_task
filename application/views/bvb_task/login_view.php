@@ -1,7 +1,7 @@
 <div class="well">
 	<h3>Login</h3>
    <?php echo validation_errors(); ?>
-   <?php echo form_open('bvb_task/users/verify_login'); ?> 
+   <?php echo form_open('users/verify_login'); ?> 
     <div class="form-group">
     	<label for="email">Usermail:</label>
      	<input type="text" class="form-control" size="20" id="email" name="email"/>

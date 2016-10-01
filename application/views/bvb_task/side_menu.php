@@ -5,17 +5,17 @@
 	</button>
 <?php if (! isset($_SESSION['logged_in'])): ?>
 	<button class="btn btn-default" type="button">
-  		<a href="<?php echo site_url('bvb_task/users/login');?>">Login</a>
+  		<a href="<?php echo site_url('users/login');?>">Login</a>
 	</button>
 	<button class="btn btn-default" type="button">
-  		<a href="<?php echo site_url('bvb_task/users/register');?>">Register</a>
+  		<a href="<?php echo site_url('users/register');?>">Register</a>
 	</button>
 <?php else: ?>
 	<button class="btn btn-default" type="button">
   		<a href="<?php echo site_url('main_ctrl/profile');?>">Account</a>
 	</button>
 	<button class="btn btn-default" type="button">
-  		<a href="<?php echo site_url('bvb_task/users/logout');?>">Logout</a>
+  		<a href="<?php echo site_url('users/logout');?>">Logout</a>
 	</button>
 <?php endif; ?>
 </div>

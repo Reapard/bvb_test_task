@@ -95,8 +95,6 @@ class Channels_model extends CI_Model {
         $this->db->order_by('channel_name DESC, user DESC');
         $result = $this->db->get('channels_table');
 
-        //var_dump($result->result_array());
-
         return $result->result_array();
     }
 

@@ -1,3 +1,15 @@
+<?php if (isset($_SESSION['channel_creation_message'])): ?>
+	<p class=<?=$_SESSION['channel_creation_message']['message_type']?>>
+		<?=$_SESSION['channel_creation_message']['message_body']?>
+	</p>
+<?php endif; ?>
+
+<?php if (isset($_SESSION['channel_edit_message'])): ?>
+	<p class=<?=$_SESSION['channel_edit_message']['message_type']?>>
+		<?=$_SESSION['channel_edit_message']['message_body']?>
+	</p>
+<?php endif; ?>
+
 <h3>Your channels</h3>
 
 <?php if (isset($user_channels)): ?>
